@@ -29,7 +29,7 @@ public class LeadBoardReturn {
                 .orElse(Collections.emptyList())
                 .stream()
                 .map(RankReturn::new)
-                .sorted(Comparator.comparing(RankReturn::getTime))
+                .sorted(Comparator.comparing(RankReturn::getTime).reversed())
                 .collect(Collectors.toList());
     }
 }
