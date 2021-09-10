@@ -50,7 +50,7 @@ public class Program {
     @Column(name="date_reset")
     private Date dateReset;
 
-    @OneToMany(fetch = FetchType.EAGER,  mappedBy = "customer",orphanRemoval = true, cascade = {CascadeType.ALL})
+    @OneToMany(fetch = FetchType.EAGER,  mappedBy = "program",orphanRemoval = true, cascade = {CascadeType.ALL})
     @Fetch(FetchMode.SUBSELECT)
     private List<ProgramCustomer> participants;
 
